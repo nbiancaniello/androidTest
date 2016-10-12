@@ -14,22 +14,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button boton1 = (Button) this.findViewById(R.id.boton1_play);
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.argon);
-        boton1.setOnClickListener(new View.OnClickListener(){
+        Button boton2 = (Button) this.findViewById(R.id.boton1_stop);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.baileconungay);
 
+        boton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 mp.start();
             }
         });
 
-        Button boton2 = (Button) this.findViewById(R.id.boton1_stop);
-        boton2.setOnClickListener(new View.OnClickListener(){
-
+        boton2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (mp.isPlaying()) {
                     mp.stop();
                 }
-
             }
         });
     }
