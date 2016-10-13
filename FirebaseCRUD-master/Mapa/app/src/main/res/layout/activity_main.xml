@@ -11,29 +11,32 @@
     tools:context="com.nico.mapa.MainActivity">
 
     <TextView
-        android:id="@+id/texto_coordenadas"
+        android:id="@+id/text_coordenates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Coordenadas"
+        android:text="@string/coordenates"
+        android:textAllCaps="true"
         android:textSize="18sp"
         android:textColor="@android:color/holo_purple"/>
 
     <EditText
-        android:id="@+id/caja_altitud"
-        android:layout_below="@+id/texto_coordenadas"
+        android:id="@+id/box_latitude"
+        android:layout_below="@+id/text_coordenates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Altitud"
+        android:hint="@string/latitude"
+        android:inputType="numberDecimal|numberSigned"
         android:textSize="16sp"
         android:textColor="@android:color/holo_green_dark"/>
 
     <EditText
-        android:id="@+id/caja_latitud"
-        android:layout_below="@+id/caja_altitud"
+        android:id="@+id/box_longitude"
+        android:layout_below="@+id/box_latitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Latitud"
+        android:hint="@string/longitude"
+        android:inputType="numberDecimal|numberSigned"
         android:textSize="16sp"
         android:textColor="@android:color/holo_green_dark"/>
     
@@ -41,8 +44,8 @@
         android:id="@+id/boton_enviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver Coord"
-        android:layout_below="@+id/caja_latitud"
+        android:text="@string/seeinmap"
+        android:layout_below="@+id/box_longitude"
         android:onClick="enviarCoordenadas"/>
 
 </RelativeLayout>

@@ -1,4 +1,10 @@
 <resources>
-    <string name="app_name">Mapa</string>
+    <string name="app_name">Map</string>
     <string name="title_activity_maps">Map</string>
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="coordenates">Coordinates</string>
+    <string name="seeinmap">See in Map</string>
+    <string name="checkvalues">Please check the input values</string>
+    <string name="markertitle">Marker in given coordinates</string>
 </resources>
