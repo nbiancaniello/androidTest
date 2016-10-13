@@ -3,6 +3,7 @@ package com.example.justjava.justjava;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -21,5 +22,11 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         ViewGroup layout = (ViewGroup) findViewById(R.id.activity_display_message);
         layout.addView(textView);
+    }
+
+    public void submitOrder(View view) {
+        Intent intent = new Intent();
+        intent.setClassName(this,"com.example.justjava.justjava.MainActivity");
+        startActivity(intent);
     }
 }

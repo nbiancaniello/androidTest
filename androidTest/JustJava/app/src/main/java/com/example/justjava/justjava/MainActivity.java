@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.texto);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        intent.setClassName(this,"com.example.justjava.justjava.DisplayMessageActivity");
         startActivity(intent);
 //        intent.setData(Uri.parse("mailto:"));
 //        if (intent.resolveActivity(getPackageManager()) != null) {

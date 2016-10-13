@@ -10,4 +10,22 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.justjava.justjava.DisplayMessageActivity">
 
+    <EditText
+        android:id="@+id/texto"
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/boton"
+        android:layout_below="@+id/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Volver"
+        android:onClick="submitOrder"/>
+
 </RelativeLayout>
