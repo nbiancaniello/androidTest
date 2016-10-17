@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:scrollbars="vertical"
     tools:context="com.nico.mapa.MainActivity">
 
     <TextView
@@ -20,32 +21,39 @@
         android:textSize="18sp"
         android:textColor="@android:color/holo_purple"/>
 
-    <EditText
-        android:id="@+id/box_latitude"
-        android:layout_below="@+id/text_coordenates"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/latitude"
-        android:inputType="numberDecimal|numberSigned"
-        android:textSize="16sp"
-        android:textColor="@android:color/holo_green_dark"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/box_longitude"
-        android:layout_below="@+id/box_latitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/longitude"
-        android:inputType="numberDecimal|numberSigned"
-        android:textSize="16sp"
-        android:textColor="@android:color/holo_green_dark"/>
-    
+        <EditText
+            android:id="@+id/box_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/latitude"
+            android:inputType="numberDecimal|numberSigned"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <EditText
+            android:id="@+id/box_longitude"
+            android:layout_below="@+id/box_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/longitude"
+            android:inputType="numberDecimal|numberSigned"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_green_dark"/>
+
+    </RelativeLayout>
+
     <Button
         android:id="@+id/boton_enviar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:text="@string/seeinmap"
-        android:layout_below="@+id/box_longitude"
         android:onClick="enviarCoordenadas"/>
 
 </RelativeLayout>
