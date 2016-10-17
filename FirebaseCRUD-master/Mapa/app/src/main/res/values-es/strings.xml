@@ -8,4 +8,8 @@
     <string name="coordenates">Coordenadas</string>
     <string name="markertitle">Marcador en coordenadas ingresadas</string>
     <string name="seeinmap">Ver en mapa</string>
+    <string name="address">Dirección</string>
+    <string name="getaddress">Recuperar Domicilio</string>
+    <string name="showaddress">Mostrar Dirección</string>
+    <string name="getcurrentaddress">Obtener Domicilio Actual</string>
 </resources>

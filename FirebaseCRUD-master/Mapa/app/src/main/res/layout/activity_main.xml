@@ -21,14 +21,9 @@
         android:textSize="18sp"
         android:textColor="@android:color/holo_purple"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="24dp"
-        android:orientation="vertical">
-
         <EditText
             android:id="@+id/box_latitude"
+            android:layout_below="@+id/text_coordenates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/latitude"
@@ -46,14 +41,49 @@
             android:textSize="16sp"
             android:textColor="@android:color/holo_green_dark"/>
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/boton_getAddress"
+            android:layout_below="@+id/box_longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/getaddress"
+            android:onClick="getAddress"/>
 
-    <Button
-        android:id="@+id/boton_enviar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="@string/seeinmap"
-        android:onClick="enviarCoordenadas"/>
+        <TextView
+            android:id="@+id/text_address"
+            android:layout_below="@+id/boton_getAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/address"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_purple"/>
+
+        <TextView
+            android:id="@+id/text_addressshown"
+            android:layout_below="@+id/text_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/address"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/boton_getCurrentAddress"
+            android:layout_below="@+id/text_addressshown"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/getcurrentaddress"/>
+
+        <Button
+            android:id="@+id/boton_checkCoordinates"
+            android:layout_below="@+id/boton_getCurrentAddress"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seeinmap"
+            android:onClick="checkCoordinates"/>
 
 </RelativeLayout>
