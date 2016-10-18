@@ -12,4 +12,5 @@
     <string name="getaddress">Recuperar Domicilio</string>
     <string name="showaddress">Mostrar Dirección</string>
     <string name="getcurrentaddress">Obtener Domicilio Actual</string>
+    <string name="novalidaddress">No se encuentra una dirección válida para mostrar</string>
 </resources>

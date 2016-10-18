@@ -11,4 +11,5 @@
     <string name="getaddress">Get Address</string>
     <string name="showaddress">Show Address</string>
     <string name="getcurrentaddress">Get Current Address</string>
+    <string name="novalidaddress">Can\'t find a valid address to show</string>
 </resources>

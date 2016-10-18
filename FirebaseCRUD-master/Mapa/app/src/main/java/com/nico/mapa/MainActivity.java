@@ -27,14 +27,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-//    @Override
-//    public void onRestoreInstanceState(Bundle savedInstanceState, PersistableBundle persistentState) {
-//        super.onRestoreInstanceState(savedInstanceState, persistentState);
-//        Intent intent = getIntent();
-//        Bundle extras = intent.getExtras();
-//        Toast.makeText(getApplicationContext(),extras.getString("LONGITUDE"),Toast.LENGTH_SHORT).show();
-//    }
-
     public void checkCoordinates(View view) {
         Intent intent = new Intent(this, MapsActivity.class);
         EditText latitude = (EditText) findViewById(R.id.box_latitude);
@@ -61,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             Geocoder geo = new Geocoder(getApplicationContext(), Locale.getDefault());
             List<Address> addresses = geo.getFromLocation(Double.valueOf(String.valueOf(latitude.getText())),Double.valueOf(String.valueOf(longitude.getText())), 1);
             if (addresses.isEmpty()) {
-                Log.d("ADDRESS", "Waiting for Location");
+                Toast.makeText(getApplicationContext(), R.string.novalidaddress, Toast.LENGTH_SHORT).show();
             } else {
                 if (addresses.size() > 0) {
 //                            Log.d("ADDRESS", addresses.get(0).getAddressLine(0) + ", " + // Dirección Completa
@@ -120,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     Geocoder geo = new Geocoder(getApplicationContext(), Locale.getDefault());
                     List<Address> addresses = geo.getFromLocation(Double.valueOf(data.getStringExtra("LATITUDE")),Double.valueOf(data.getStringExtra("LONGITUDE")), 1);
                     if (addresses.isEmpty()) {
-                        Log.d("ADDRESS", "Waiting for Location");
+                        Toast.makeText(getApplicationContext(), R.string.novalidaddress, Toast.LENGTH_SHORT).show();
                     } else {
                         if (addresses.size() > 0) {
 //                            Log.d("ADDRESS", addresses.get(0).getAddressLine(0) + ", " + // Dirección Completa
@@ -133,6 +125,12 @@ public class MainActivity extends AppCompatActivity {
                                     addresses.get(0).getLocality() +", " +  // Localidad
                                     addresses.get(0).getAdminArea() + ", " +  // Municipìo
                                     addresses.get(0).getCountryName()); // País
+
+                            EditText latitude = (EditText) findViewById(R.id.box_latitude);
+                            EditText longitude = (EditText) findViewById(R.id.box_longitude);
+
+                            latitude.setText(data.getStringExtra("LATITUDE"));
+                            longitude.setText(data.getStringExtra("LONGITUDE"));
                         }
                     }
                 }
@@ -140,10 +138,10 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             } else {
-                Toast.makeText(getApplicationContext(), "No hay información para mostrar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.novalidaddress, Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(getApplicationContext(), "No hay información para mostrar", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.novalidaddress, Toast.LENGTH_SHORT).show();
         }
     }
 }
