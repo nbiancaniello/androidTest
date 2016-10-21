@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="coordenates">Coordinates</string>
+    <string name="seeinmap">See in Map</string>
+    <string name="checkvalues">Please check the input values</string>
+    <string name="markertitle">Marker in given coordinates</string>
+    <string name="address">Address</string>
+    <string name="getaddress">Get Address</string>
+    <string name="showaddress">Show Address</string>
+    <string name="getcurrentaddress">Get Current Address</string>
+    <string name="novalidaddress">Can\'t find a valid address to show</string>
+</resources>
